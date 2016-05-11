@@ -44,7 +44,7 @@ function logMessage(msg) {
 
 createHeartGrid();
 
-var socket = io('http://localhost:3000', { transports: ["websocket","jsonp-polling","xhr-polling","polling"] });
+var socket = io();
 socket.on('msg', function(msg) {
     console.log('socket.io: ' + msg);
         setRandomPixel();
